@@ -17,6 +17,9 @@
 #define MAX_BLOCK_X 8
 #define MAX_BLOCK_Y 8
 
+// アニメーション
+#define REMOVING_TIME 0.1f
+
 // 背景画像のファイル名
 #define PNG_BACKGROUND "background.png"
 
@@ -53,6 +56,9 @@ protected:
     std::list<int> getSameColorBlockTags(int baseTag, kBlock blockType);
     void removeBlock(std::list<int> blockTags, kBlock blockType);
     bool hasSameColorBlock(std::list<int> blockTagList, int searchBlockTag);
+    
+    // 2-3-1
+    void removingBlock(cocos2d::CCNode* block);
     
     
 public:
